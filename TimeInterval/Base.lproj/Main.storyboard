@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aLR-cW-Ifu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimeInterval" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gWj-Ld-fKA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="axV-Pt-wXE">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="axV-Pt-wXE" id="5Lf-yN-xgG">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="0zn-JQ-Tas"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Lmy-Sk-B6f"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gWj-Ld-fKA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="1JF-xT-UKs"/>
+                            <constraint firstItem="gWj-Ld-fKA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="23l-pL-20O"/>
+                            <constraint firstAttribute="centerY" secondItem="gWj-Ld-fKA" secondAttribute="centerY" id="EVP-3B-WcI"/>
+                            <constraint firstItem="gWj-Ld-fKA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="LRw-Fy-kq5"/>
+                            <constraint firstAttribute="centerX" secondItem="gWj-Ld-fKA" secondAttribute="centerX" id="YEo-I9-MDk"/>
+                            <constraint firstItem="gWj-Ld-fKA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="r21-dl-9uZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="23l-pL-20O"/>
+                                <exclude reference="LRw-Fy-kq5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="G0c-6X-q3r"/>
+                    <connections>
+                        <outlet property="table" destination="gWj-Ld-fKA" id="cZ8-yb-aDu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198" y="360"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Zx-1D-lkW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aLR-cW-Ifu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FKs-Mu-sbu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CaR-bx-I2Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2E-JD-CqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310" y="1021"/>
+        </scene>
+    </scenes>
+</document>
